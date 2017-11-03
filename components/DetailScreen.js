@@ -70,6 +70,15 @@ class DetailScreen extends Component {
           key={city.id}
           title={city.name}
           subtitle={city.weather}
+          badge={{
+            value: city.temp
+              ? city.temp + ' °F'
+              : '0 °F',
+            containerStyle: {
+              backgroundColor: 'red',
+              paddingTop: 50  
+            },
+          }}
           hideChevron
         />
         <ListItem

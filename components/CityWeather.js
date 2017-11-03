@@ -10,19 +10,20 @@ class CityWeather extends Component {
         subtitle={
           this.props.weather ? this.props.weather : 'TBD'
         }
-        badge={{
-          value: this.props.temp
-            ? this.props.temp + ' °F'
-            : '0 °F',
-          badgeContainerStyle: {
-            backgroundColor: 'lightblue',
-          },
-        }}
-        avatar={{ uri: this.props.icon }}
+        // badge={{
+        //   value: this.props.temp
+        //     ? this.props.temp + ' °F'
+        //     : '0 °F',
+        //   badgeContainerStyle: {
+        //     backgroundColor: 'lightblue',
+        //   },
+        // }}
+        // avatar={{ uri: this.props.icon }}
         onPress={
           this.props.onPress ? this.props.onPress() : null
         }
         hideChevron={Platform.OS !== 'ios'}
+        titleStyle={{fontSize: 30, color: 'red'}}
       />
     );
   }

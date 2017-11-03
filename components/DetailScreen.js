@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {View} from 'react-native';
 import { ListItem } from 'react-native-elements';
 import LoadingIndicator from './LoadingIndicator'
+import CityWeather from './CityWeather'
 
 class DetailScreen extends Component {
   static navigationOptions = {
@@ -53,24 +54,28 @@ class DetailScreen extends Component {
 
     const { city } = this.state;
 
+    //Component is lurky in the corner waiting to be used
+    // <CityWeather
+    //   key={city.id}
+    //   name={city.name}
+    //   // temp={city.temp}
+    //   weather={city.weather}
+    //   icon={city.icon}
+    // />
+
+
     return (
       <View style={{ flex: 1, backgroundColor: 'white' }}>
         <ListItem
           key={city.id}
           title={city.name}
           subtitle={city.weather}
-          avatar={{ uri: city.icon }}
-          badge={{
-            value: city.temp + ' °F',
-            badgeContainerStyle: {
-              backgroundColor: 'lightblue',
-            },
-          }}
           hideChevron
         />
         <ListItem
           title="Humidity"
           rightTitle={city.humidity + '%'}
+          titleStyle={{fontSize: 20, color: 'blue', backgroundColor:'tomato'}}
           hideChevron
         />
         <ListItem

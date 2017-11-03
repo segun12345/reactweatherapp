@@ -13,11 +13,11 @@ class MasterScreen extends Component {
 
     this.state = {
       cities: [
+        // { name: 'London', id: 2643744 },
+        // { name: 'Paris', id: 2968815 },
+        // { name: 'Hong Kong', id: 1819729 },
         { name: 'San Jose', id: 5392171 },
         { name: 'New York', id: 5128581 },
-        { name: 'London', id: 2643744 },
-        { name: 'Paris', id: 2968815 },
-        { name: 'Hong Kong', id: 1819729 },
         { name: 'Singapore', id: 1880252 },
         { name: 'Beijing', id: 1816670 },
         { name: 'Sydney', id: 6619279 },
@@ -70,9 +70,9 @@ class MasterScreen extends Component {
           <CityWeather
             key={city.id}
             name={city.name}
-            temp={city.temp}
-            weather={city.weather}
-            icon={city.icon}
+            // temp={city.temp}
+            // weather={city.weather}
+            // icon={city.icon}
             onPress={() =>
               () =>
                 this.props.navigation.navigate('Detail', {
